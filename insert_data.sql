@@ -1,4 +1,4 @@
-use inventory;
+use store_management;
 
 INSERT INTO product (name, category, price, sku)
 VALUES
@@ -183,404 +183,404 @@ INSERT INTO customer (name, email, phone) VALUES
 ('Joshua Young', 'joshua.young@example.com', '7788990011'),
 ('Luke Davis', 'luke.davis@example.com', '8899001122');
 
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (1, 1, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 2
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (2, 2, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 3
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (3, 3, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 4
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (4, 4, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 5
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (5, 5, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 6
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (6, 6, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 7
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (7, 7, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 8
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (8, 8, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 9
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (9, 9, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 10
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (10, 10, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 11
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (11, 1, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 12
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (12, 2, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 13
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (13, 3, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 14
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (14, 4, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 15
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (15, 5, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 16
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (16, 6, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 17
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (17, 7, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 18
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (18, 8, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 19
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (19, 9, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 20
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (20, 10, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 21
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (21, 1, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 22
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (22, 2, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 23
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (23, 3, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 24
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (24, 4, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 25
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (25, 5, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 26
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (26, 6, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 27
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (27, 7, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 28
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (28, 8, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 29
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (29, 9, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 30
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (30, 10, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 31
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (31, 1, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 32
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (32, 2, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 33
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (33, 3, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 34
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (34, 4, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 35
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (35, 5, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 36
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (36, 6, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 37
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (37, 7, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 38
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (38, 8, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 39
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (39, 9, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 40
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (40, 10, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 41
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (41, 1, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 42
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (42, 2, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 43
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (43, 3, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 44
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (44, 4, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 45
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (45, 5, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 46
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (46, 6, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 47
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (47, 7, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 48
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (48, 8, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 49
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (49, 9, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 50
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (50, 10, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 
 -- Order 51
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (51, 1, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 52
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (52, 2, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 53
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (53, 3, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 54
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (54, 4, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 55
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (55, 5, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 56
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (56, 6, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 57
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (57, 7, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 58
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (58, 8, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 59
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (59, 9, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 60
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (60, 10, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 61
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (61, 1, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 62
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (62, 2, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 63
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (63, 3, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 64
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (64, 4, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 65
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (65, 5, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 66
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (66, 6, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 67
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (67, 7, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 68
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (68, 8, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 69
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (69, 9, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 70
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (70, 10, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 71
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (71, 1, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 72
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (72, 2, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 73
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (73, 3, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 74
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (74, 4, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 75
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (75, 5, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 76
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (76, 6, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 77
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (77, 7, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 78
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (78, 8, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 79
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (79, 9, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 80
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (80, 10, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 81
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (81, 1, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 82
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (82, 2, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 83
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (83, 3, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 84
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (84, 4, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 85
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (85, 5, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 86
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (86, 6, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 87
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (87, 7, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 88
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (88, 8, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 89
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (89, 9, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 90
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (90, 10, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 91
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (91, 1, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 92
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (92, 2, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 93
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (93, 3, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 94
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (94, 4, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 95
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (95, 5, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 96
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (96, 6, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 97
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (97, 7, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 98
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (98, 8, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 99
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (99, 9, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order 100
-INSERT INTO order_details (customer_id, store_id, total_price, date) 
+INSERT INTO order_details (customer_id, store_id, total_price, date)
 VALUES (100, 10, ROUND(RAND() * 300 + 100, 2), DATE_ADD('2024-03-31', INTERVAL FLOOR(RAND() * 365) DAY));
 
 -- Order Item for Order 1
