@@ -1,18 +1,41 @@
 package com.project.code.Repo;
 
-public interface ReviewRepository {
-// 1. Add the repository interface:
-//    - Extend MongoRepository<Review, String> to inherit basic CRUD functionality for MongoDB operations.
-//    - This allows the repository to perform operations like save, delete, update, and find without having to implement these methods manually.
+import java.util.List;
 
-// Example: public interface ReviewRepository extends MongoRepository<Review, String> {}
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
 
-// 2. Add custom query methods:
-//    - **findByStoreIdAndProductId**:
-//      - This method will retrieve reviews for a specific product and store.
-//      - Return type: List<Review>
-//      - Parameters: Long storeId, Long productId
+import com.project.code.Model.Review;
 
-// Example: public List<Review> findByStoreIdAndProductId(Long storeId, Long productId);
+/**
+ * Repository interface for {@link Review} documents.
+ *
+ * <p>Extending {@code MongoRepository} provides the full set of standard
+ * CRUD operations against the MongoDB {@code reviews} collection. The
+ * identifier type is {@code String} because MongoDB generates ObjectIds
+ * that are represented as hexadecimal strings.</p>
+ *
+ * <p>In addition to the inherited operations, this repository declares
+ * a custom query method that retrieves reviews by store and product
+ * identifiers, following the Spring Data derived-query naming
+ * convention.</p>
+ */
+@Repository
+public interface ReviewRepository extends MongoRepository<Review, String> {
 
+    /**
+     * Retrieves all reviews associated with a specific product within a
+     * specific store.
+     *
+     * <p>The method relies on Spring Data's derived-query naming
+     * convention. The field names {@code storeId} and {@code productId}
+     * are matched directly against the properties declared in the
+     * {@link Review} document, generating an equivalent MongoDB query
+     * without requiring a custom implementation.</p>
+     *
+     * @param storeId   the identifier of the store
+     * @param productId the identifier of the product
+     * @return the list of reviews that match both criteria
+     */
+    List<Review> findByStoreIdAndProductId(Long storeId, Long productId);
 }

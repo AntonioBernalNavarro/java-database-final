@@ -1,49 +1,179 @@
 package com.project.code.Model;
 
+import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.validation.constraints.NotNull;
+
+/**
+ * Entity representing a customer within the store management system.
+ *
+ * <p>A customer is a person who may place one or more orders across the
+ * different stores managed by the application. The relationship with
+ * {@link OrderDetails} is modelled as a one-to-many association, meaning
+ * that a single customer can be linked to multiple orders, while each
+ * order belongs to exactly one customer.</p>
+ */
+@Entity
 public class Customer {
 
-// 1. Add 'id' field: 
-//    - Type: private long 
-//    - It should be auto-incremented.
-//    - Use @Id to mark it as the primary key and @GeneratedValue(strategy = GenerationType.IDENTITY) to auto-increment it.
+    /**
+     * Unique identifier of the customer. It is automatically generated
+     * by the database using an identity-based strategy.
+     */
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
-// 2. Add 'name' field:
-//    - Type: private String
-//    - This field cannot be empty, use the @NotNull annotation to enforce this rule.
+    /**
+     * Full name of the customer. This field is mandatory and must not
+     * be left empty.
+     */
+    @NotNull(message = "Name cannot be null")
+    private String name;
 
-    // Example: @NotNull(message = "Name cannot be null")
+    /**
+     * Contact email address of the customer. This field is mandatory
+     * and must not be left empty.
+     */
+    @NotNull(message = "Email cannot be null")
+    private String email;
 
-// 3. Add 'email' field:
-//    - Type: private String
-//    - This field cannot be empty, use the @NotNull annotation to enforce this rule.
+    /**
+     * Contact phone number of the customer. This field is mandatory
+     * and must not be left empty.
+     */
+    @NotNull(message = "Phone cannot be null")
+    private String phone;
 
-    // Example: @NotNull(message = "Email cannot be null")
+    /**
+     * Collection of orders placed by this customer.
+     *
+     * <p>The relationship is bidirectional: the {@code mappedBy}
+     * attribute indicates that the {@code customer} field in
+     * {@link OrderDetails} owns the foreign key. The
+     * {@code @JsonManagedReference} annotation ensures that this side
+     * of the relationship is serialised, while the matching
+     * {@code @JsonBackReference} on the {@link OrderDetails} side
+     * prevents infinite recursion during JSON serialisation.</p>
+     */
+    @OneToMany(mappedBy = "customer", fetch = FetchType.EAGER)
+    @JsonManagedReference
+    private List<OrderDetails> orders;
 
-// 4. Add 'phone' field:
-//    - Type: private String
-//    - This field cannot be empty, use the @NotNull annotation to enforce this rule.
+    /**
+     * Default no-argument constructor required by JPA.
+     */
+    public Customer() {
+    }
 
-    // Example: @NotNull(message = "Phone cannot be null")
+    /**
+     * Constructs a customer with the given name, email and phone number.
+     *
+     * @param name  the full name of the customer
+     * @param email the contact email address
+     * @param phone the contact phone number
+     */
+    public Customer(String name, String email, String phone) {
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+    }
 
-// 5. Add one-to-many relationship with orders:
-//    - A customer can have multiple orders.
-//    - Use the @OneToMany annotation to establish this relationship.
-//    - Specify "mappedBy = 'customer'" to indicate that the 'customer' field in the 'Order' entity owns the relationship.
-//    - Use @JsonManagedReference to ensure proper JSON serialization of related orders.
+    /**
+     * Retrieves the customer identifier.
+     *
+     * @return the unique identifier of the customer
+     */
+    public long getId() {
+        return id;
+    }
 
-    // Example: @OneToMany(mappedBy = "customer", fetch = FetchType.EAGER)
-    // Example: @JsonManagedReference
+    /**
+     * Sets the customer identifier.
+     *
+     * @param id the unique identifier to assign
+     */
+    public void setId(long id) {
+        this.id = id;
+    }
 
-// 6. Getters and Setters:
-//    - For each field ('id', 'name', 'email', 'phone'), add getter and setter methods.
-//    - Example: public Long getId(), public void setId(Long id)
-//    - Example: public String getName(), public void setName(String name)
-//    - Add getters and setters for 'email' and 'phone' fields as well.
+    /**
+     * Retrieves the customer's full name.
+     *
+     * @return the name of the customer
+     */
+    public String getName() {
+        return name;
+    }
 
-// 7. Ensure to use proper annotations and validate constraints:
-//    - Use @NotNull for fields that cannot be empty like 'name', 'email', and 'phone'.
-//    - Make sure you add the correct annotations for entity mapping and relationship management like @Entity, @Id, @GeneratedValue, @OneToMany, and @JsonManagedReference.
+    /**
+     * Sets the customer's full name.
+     *
+     * @param name the name to assign
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    /**
+     * Retrieves the customer's email address.
+     *
+     * @return the email of the customer
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * Sets the customer's email address.
+     *
+     * @param email the email to assign
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    /**
+     * Retrieves the customer's phone number.
+     *
+     * @return the phone number of the customer
+     */
+    public String getPhone() {
+        return phone;
+    }
+
+    /**
+     * Sets the customer's phone number.
+     *
+     * @param phone the phone number to assign
+     */
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    /**
+     * Retrieves the list of orders associated with this customer.
+     *
+     * @return the list of orders placed by the customer
+     */
+    public List<OrderDetails> getOrders() {
+        return orders;
+    }
+
+    /**
+     * Sets the list of orders associated with this customer.
+     *
+     * @param orders the list of orders to assign
+     */
+    public void setOrders(List<OrderDetails> orders) {
+        this.orders = orders;
+    }
 }
-
